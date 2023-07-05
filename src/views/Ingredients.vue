@@ -32,7 +32,6 @@ const keyword = ref('')
 const computedIngredients = computed(() => {
   if(!computedIngredients) return ingredients
   return ingredients.value.filter(i => 
-    (i.strDescription || '').toLowerCase().includes(keyword.value.toLowerCase()) ||
     i.strIngredient.toLowerCase().includes(keyword.value.toLowerCase())
   )
 })
