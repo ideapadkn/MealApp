@@ -1,6 +1,6 @@
 <template>
-  <h1 class="text-5xl font-semibold p-8">Search By Letter</h1>
-  <div class="flex justify-center gap-2 mt-2">
+  <h1 class="text-5xl font-semibold p-8 max-sm:text-3xl">Search By Letter</h1>
+  <div class="flex justify-center gap-2 mt-2 flex-wrap p-3">
     <router-link 
       :to="{name: 'byLetter', params: {letter}}"
       v-for="letter of letters"

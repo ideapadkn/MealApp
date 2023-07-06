@@ -3,7 +3,7 @@
     <router-link to="/" class="inline-flex items-center h-full px-5 text-2xl">
       Home
     </router-link>
-    <div class="flex items-center gap-1">
+    <div @click="toggleMenu" class="nav flex items-center gap-1">
       <div class="relative">
         <router-link :to="{name: 'byName'}" class="nav-link inline-flex items-center transition-colors-100 p-2 h-full">
           Search Meals
@@ -22,6 +22,10 @@
     </div>
   </header>
 </template>
+
+<script>
+
+</script>
 
 <style>
 .nav-link {

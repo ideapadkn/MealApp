@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col p-8 items-center justify-center">
     <div class="w-full">    
-      <h1 class="text-5xl font-semibold mb-5">Recomedations For You</h1>
+      <h1 class="text-5xl font-semibold mb-5 max-sm:text-3xl">Recomedations For You</h1>
       <div class="flex justify-between items-center flex-wrap gap-5">
         <div
           v-for="meal of meals"

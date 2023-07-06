@@ -13,11 +13,11 @@
         <h3 class="font-bold">{{ meal.strMeal }}</h3>
         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quidem.</p>
         <div class="flex items-center">
-        <YoutubeButton :href="meal.strYoutube">
-          YouTube
-        </YoutubeButton>
+          <YoutubeButton :href="meal.strYoutube">
+            YouTube
+          </YoutubeButton>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
