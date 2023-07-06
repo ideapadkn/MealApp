@@ -4,7 +4,7 @@
       <h1 class="text-5xl font-semibold mb-5">Recomedations For You</h1>
       <div class="flex justify-between items-center">
         <div
-          v-for="meal of computedMeals"
+          v-for="meal of meals"
           :key="meal.id"
           class="shadow-lg"
         >
@@ -15,7 +15,7 @@
               class="rounded-t-xl h-48 w-full object-cover"
             >
           </router-link>
-          <div class="p-3">  
+          <div class="p-3 shadow-[0_35px_35px_rgba(0,0,0,0.25)]">  
             <h3 class="font-bold">{{ meal.strMeal }}</h3>
             <p class="mb-4">{{ meal.strTags }}</p>
             <div class="flex items-center">
@@ -36,14 +36,6 @@
   import YoutubeButton from '../components/YoutubeButton.vue'
 
   const meals = ref([])
-  const keyword = ref('')
-
-  const computedMeals = computed(() => {
-  if(!computedMeals) return meals
-    return meals.value.filter(i => 
-      i.strMeal.toLowerCase().includes(keyword.value.toLowerCase())
-    )
-  })
 
   onMounted(() => {
     axiosClient.get('random.php')

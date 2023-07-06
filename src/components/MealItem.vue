@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white shadow rounded-xl"
+    class="shadow-[0_35px_35px_rgba(0,0,0,0.25)] rounded-xl"
   >
       <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
         <img 

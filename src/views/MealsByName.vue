@@ -3,7 +3,7 @@
     <h1 class="text-5xl font-semibold mb-5">Search By Name</h1>
     <input 
       type="text" 
-      class="rounded border-2 border-gray-200 w-full" 
+      class="rounded border-2 border-gray-200 w-full text-black" 
       placeholder="Search for Meals"
       v-model="keyword"
       @change="searchMeals"

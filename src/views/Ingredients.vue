@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8">
+  <div class="p-8 ">
     <h1 class="text-5xl font-semibold mb-5">Ingredients</h1>
     <input 
       type="text" 
@@ -15,9 +15,9 @@
       }" 
       v-for="ingredient of computedIngredients" 
       :key="ingredient.idIngredient" 
-      class="block rounded p-3 mb-5 shadow"
+      class="block rounded p-3 mb-5 shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
     >
-      <h3 class="text-2xl font-bold">{{ingredient.strIngredient}}</h3>
+      <h3 class="text-2xl font-bold mb-3">{{ingredient.strIngredient}}</h3>
       <p class="">{{ingredient.strDescription}}</p>
     </router-link>
   </div>
