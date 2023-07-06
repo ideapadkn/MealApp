@@ -9,17 +9,16 @@
           class="rounded-t-xl h-48 w-full object-cover"
         >
       </router-link>
-      <div class="p-3">
-        
+      <div class="p-3">  
         <h3 class="font-bold">{{ meal.strMeal }}</h3>
         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quidem.</p>
         <div class="flex items-center">
-          <YoutubeButton :href="meal.strYoutube">
-            YouTube
-          </YoutubeButton>
-        </div>
+        <YoutubeButton :href="meal.strYoutube">
+          YouTube
+        </YoutubeButton>
       </div>
     </div>
+  </div>
 </template>
 
 <script setup>
