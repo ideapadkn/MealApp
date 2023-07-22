@@ -1,13 +1,14 @@
 <template>
   <div class="flex flex-col p-8 items-center justify-center">
-    <div class="w-full">    
-      <h1 class="text-5xl font-semibold mb-5 max-sm:text-3xl">Recomedations For You</h1>
+    <div class="w-full">
+      <h1 class="text-5xl font-semibold mb-5 max-sm:text-3xl text-orange-400">Recomedations For You</h1>
       <div class="flex justify-between items-center flex-wrap gap-5">
         <div
           v-for="meal of meals"
           :key="meal.id"
           class="shadow-lg w-[300px]"
         >
+          {{ meal }}
           <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
             <img 
               :src="meal.strMealThumb" 
@@ -17,7 +18,7 @@
           </router-link>
           <div class="p-3 shadow-[0_35px_35px_rgba(0,0,0,0.25)]">  
             <h3 class="font-bold">{{ meal.strMeal }}</h3>
-            <p class="mb-4">{{ meal.strTags }}</p>
+            <p class="mb-4">{{ meal.strInstructions }}</p>
             <div class="flex items-center">
               <YoutubeButton :href="meal.strYoutube">
                 YouTube
