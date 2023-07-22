@@ -40,16 +40,8 @@
 <script></script>
 
 <style>
-.nav-link::after {
-  content: "";
-  position: absolute;
-  border-bottom: 2px solid #fff;
-  width: 0;
-  left: 30%;
-  bottom: 0;
-  transition: all 0.6s;
-}
-.nav-link:hover::after {
-  width: 100%;
+.nav-link:hover {
+  color: orange;
+  transition: all 150ms;
 }
 </style>

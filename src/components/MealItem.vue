@@ -1,9 +1,9 @@
 <template>
   <div
-    class="shadow-[0_35px_35px_rgba(0,0,0,0.25)] rounded-xl hover:scale-105"
+    class="shadow-[0_35px_35px_rgba(0,0,0,0.25)] rounded-xl hover:scale-105 transition-all"
   >
       <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
-        <img 
+        <img
           :src="meal.strMealThumb" 
           :alt="meal.strMeal" 
           class="rounded-t-xl h-48 w-full object-cover"

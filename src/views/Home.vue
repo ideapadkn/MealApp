@@ -35,11 +35,13 @@ import { ref, computed, onMounted } from "vue";
 import axiosClient from "../axiosClient";
 import YoutubeButton from "../components/YoutubeButton.vue";
 
+// const ingredients = ref([])
 const meals = ref([]);
 
 onMounted(() => {
   axiosClient.get("search.php?s").then(({ data }) => {
     meals.value = data.meals;
+    // ingredients.value = data.meals
   });
 });
 </script>

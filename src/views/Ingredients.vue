@@ -1,25 +1,29 @@
 <template>
-  <div class="p-8 ">
-    <h1 class="text-5xl font-semibold mb-5 max-sm:text-3xl text-orange-400">Ingredients</h1>
-    <input 
-      type="text" 
-      class="rounded border-2 border-gray-200 w-full mb-3" 
-      placeholder="Search for Ingredients"
-      v-model="keyword"
-      @change="searchMeals"
-    >
-    <router-link 
-      :to="{
-        name: 'byIngredients', 
-        params: { ingredients: ingredient.strIngredient }
-      }" 
-      v-for="ingredient of computedIngredients" 
-      :key="ingredient.idIngredient" 
-      class="block rounded p-3 mb-5 shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
-    >
-      <h3 class="text-2xl font-bold mb-3">{{ingredient.strIngredient}}</h3>
-      <p class="">{{ingredient.strDescription}}</p>
-    </router-link>
+  <div class="p-8">
+    <div class="block">
+      <h1 class="text-5xl font-semibold mb-5 max-sm:text-3xl text-orange-400">Ingredients</h1>
+      <input 
+        type="text" 
+        class="rounded border-2 border-gray-200 w-full mb-3" 
+        placeholder="Search for Ingredients"
+        v-model="keyword"
+        @change="searchMeals"
+      >
+    </div>
+    <div class="">
+      <router-link 
+        :to="{
+          name: 'byIngredients', 
+          params: { ingredients: ingredient.strIngredient }
+        }" 
+        v-for="ingredient of computedIngredients" 
+        :key="ingredient.idIngredient" 
+        class="block rounded p-3 mb-5 shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
+      >
+        <h3 class="text-2xl font-bold mb-3">{{ingredient.strIngredient}}</h3>
+        <p class="">{{ingredient.strDescription}}</p>
+      </router-link>
+    </div>
   </div>
 </template>
 
