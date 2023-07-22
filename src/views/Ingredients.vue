@@ -1,6 +1,6 @@
 <template>
   <div class="p-8 ">
-    <h1 class="text-5xl font-semibold mb-5 max-sm:text-3xl">Ingredients</h1>
+    <h1 class="text-5xl font-semibold mb-5 max-sm:text-3xl text-orange-400">Ingredients</h1>
     <input 
       type="text" 
       class="rounded border-2 border-gray-200 w-full mb-3" 
